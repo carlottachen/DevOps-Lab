@@ -12,6 +12,8 @@ var rollbar = new Rollbar({
     captureUnhandledRejections: true,
 })
 
+let students = [];
+
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, '../public/index.html'));
 })
