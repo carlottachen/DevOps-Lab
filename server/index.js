@@ -7,7 +7,7 @@ app.use(express.json());//axios requests
 
 var Rollbar = require('rollbar')
 var rollbar = new Rollbar({
-    accessToken: '8dada79b69de434ab20550bc7e80d3b7',
+    accessToken: 'e627d307b849456abf60927ac7436a03',
     captureUncaught: true,
     captureUnhandledRejections: true,
 })
