@@ -1,10 +1,10 @@
-const button = document.querySelector('button');
+const lucky = document.querySelector('#lucky-num');
 
-function randomNumber(){
+function randomNumber() {
 	let max = 100;
 	let result = Math.floor(Math.random() * max);
 	alert(result);
 }
-button.addEventListener('click', randomNumber);
+lucky.addEventListener('click', randomNumber);
 
 
