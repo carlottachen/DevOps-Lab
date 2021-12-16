@@ -30,7 +30,7 @@ app.post('/api/student', (req, res) => {
     let { name } = req.body;
     name = name.trim(); //get rid of whitespace for uniformity
     students.push(name);
-    rollbar.log('Student added successfully', { aurthor: "Carlotta", type: 'manual entry' });
+    rollbar.log('Student added successfully', { author: "Carlotta", type: 'manual entry' });
     res.status(200).send(students);
 })
 
