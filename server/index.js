@@ -5,8 +5,8 @@ const path = require('path');
 const app = express();
 app.use(express.json());//axios requests
 
-var Rollbar = require('rollbar')
-var rollbar = new Rollbar({
+const Rollbar = require('rollbar')
+const rollbar = new Rollbar({
     accessToken: '20a0fa1b6a2d46c78354c7e76a7062aa',
     captureUncaught: true,
     captureUnhandledRejections: true,
@@ -16,6 +16,7 @@ let students = [];
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, '../public/index.html'));
+    rollbar.info('html served successfully');
 })
 
 app.get('/js', (req, res) => {
@@ -24,6 +25,7 @@ app.get('/js', (req, res) => {
 
 app.get('/css', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/styles.css'));
+    rollbar.info('css file served successfully');
 })
 
 app.post('/api/student', (req, res) => {
